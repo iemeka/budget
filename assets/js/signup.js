@@ -1,15 +1,26 @@
 let button = document.getElementById("signup");
-let username = document.getElementById("name");
-let password = document.getElementById("pass");
 
 button.addEventListener("click", () => {
-    let request = new XMLHttpRequest()
-    request.open('POST','http://127.0.0.1:5000/signup', true);
-    request.setRequestHeader('content-type', 'application/json');
-    request.onreadystatechange = function (){
-        if (request.readyState == 4 && request.status == 200){
-            console.log(request.responseText)
+    let username = document.getElementById("name").value;
+    let password = document.getElementById("pass").value;
+    let user = {
+    'username':username,
+    'password':password
+    }
+    let dataParams = {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         }
     }
-    request.send(JSON.stringify({'username':username.value, 'password':password.value}));
+    fetch('http://127.0.0.1:5000/signup', dataParams)
+    .then(response => response.json())
+    .then(function(result){
+        if (result.data == null){
+            return document.getElementById('error-message').textContent = result.error
+        }
+        return window.location.replace('http://localhost:8000/budget.html')
+    });
 });
