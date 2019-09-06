@@ -11,19 +11,50 @@ getAllbudgets = function (){
     .then(function(result){
         let table = document.getElementsByTagName("table")[0]
         for(let item of result.data){
-            console.log(item)
+            // console.log(item)
             let row = document.createElement("tr");
             row.setAttribute("id","row-"+item.budget_id)
             for(let j=0; j<3; j++){
                 if (j==0){
                     let field = document.createElement("td");
                     field.textContent = item.budget_title
-                    field.setAttribute("id","title-field"+item.budgetId)
-                    let titleField = document.getElementById("title-field"+item.budgetId)
-                    titleField.addEventListener('click', ()=>{
+                    row.append(field)                    
+                    field.addEventListener('click', ()=>{
+                        let editBox = document.createElement("input")
                         field.textContent = " "
+                        editBox.setAttribute("type", "text")
+                        editBox.setAttribute("value", item.budget_title)
+                        field.appendChild(editBox)
+                        editBox.addEventListener('click', event =>{
+                            event.stopPropagation()
+                        })
+                        let timeout;
+                        editBox.addEventListener('input',()=>{
+                            clearTimeout(timeout);
+                            timeout = setTimeout(function(){
+                                let data = {
+                                   'budget_title': editBox.value,
+                                } 
+                                let dataParams = {
+                                    method: 'PUT',
+                                    body: JSON.stringify(data),
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'Accept': 'application/json'
+                                    }
+                                }
+                                fetch(`http://127.0.0.1:5000/budget/${item.budget_id}`, dataParams)
+                                .then(response => response.json())
+                                .then(function(result){
+                                    let newData = result.data
+                                    editBox.remove();
+                                    field.textContent = newData.budget_title
+                                })
+                            } , 900);
+                           
+                        })
                     })
-                    row.append(field)
+                    
                 } else if (j==1){
                     let field = document.createElement("td");
                     field.textContent = item.budget_id
@@ -48,7 +79,6 @@ getAllbudgets = function (){
                         fetch(`http://127.0.0.1:5000/budget/${item.budget_id}`, dataParams)
                         .then(response => response.json())
                         .then(function(result){
-                            console.log(result.data)
                         });
                         let delRow = document.getElementById("row-"+item.budget_id);
                         delRow.remove();
