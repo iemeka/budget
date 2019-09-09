@@ -14,7 +14,6 @@ getAllbudgets = function (){
             return window.location.replace('http://localhost:8000/index.html')
         }else{
             for(let item of result.data){
-                // console.log(item)
                 let row = document.createElement("tr");
                 row.setAttribute("id","row-"+item.budget_id)
                 for(let j=0; j<3; j++){
@@ -72,12 +71,10 @@ getAllbudgets = function (){
                                             editBox.remove();
                                             field.textContent = newData.budget_title
                                         }
-                                        
                                     })
                                 } , 6000);
-                               
-                            })
-                        })
+                            });
+                        });
                         
                     } else if (j==1){
                         let field = document.createElement("td");
@@ -109,7 +106,7 @@ getAllbudgets = function (){
                         });
     
                         openBtn.addEventListener('click', ()=> {
-                            return window.location.replace('http://localhost:8000/expense.html')
+                            return window.location.replace(`http://localhost:8000/expense.html?${item.budget_id}`)
                         })
                     }
                     

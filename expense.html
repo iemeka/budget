@@ -5,24 +5,18 @@
         <link type="text/css" rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <a style="margin-left: 250px" href=""> Close </a>
-        <table>
+        <table id="table">
             <tr>
                 <th>title</th>
-                <th>cost</th>
+                <th>total</th>
                 <th>action</th>
             </tr>
-            <tr>
-                <td>groceries</td>
-                <td>30000</td>
-                <td><button>delete</button></td>
-            </tr>
-            <tr>
-                <td>total</td>
-                <td>30000</td>
-            </tr>
         </table>
-        <button>new</button>
+        <form id="add-budget-form"></form>
+        <button id="add-budget">New</button>
 
+        
+        <p id="error-message"></p>
+        <script src="assets/js/expense.js"></script>
     </body>
 </html>
