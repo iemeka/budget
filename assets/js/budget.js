@@ -39,13 +39,9 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row){
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
-                                    document.getElementById("error-message").textContent = result.error
-                                    let timeout;
-                                    clearTimeout(timeout);
-                                    timeout = setTimeout(function(){
-                                        document.getElementById("error-message").textContent =" "
-                                    },3000)
-                                
+                                    errorMessage(result.error)
+                                    editBox.remove();
+                                    field.textContent = budgetTitle
                                 }else{
                                     let newData = result.data
                                     editBox.remove();
@@ -148,41 +144,40 @@ addNewBudget = function(){
             addNewBudgetBtn.textContent = "Save"
         } else if ( addNewBudgetBtn.textContent == "Save"){
             let budgetTitleInput = document.getElementById("budget-title")
-            let clsbtn = document.getElementById("close-btn")
-            let newTitle = {
-                'budget_title': budgetTitleInput.value
-            }
-            let dataParams = {
-                method:'POST',
-                body:JSON.stringify(newTitle),
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+            if (budgetTitleInput == ""){
+                errorMessage(result.error)
+            }else{
+
+                let clsbtn = document.getElementById("close-btn")
+                let newTitle = {
+                    'budget_title': budgetTitleInput.value
                 }
-            }
-            fetch('http://127.0.0.1:5000/budget', dataParams)
-            .then(response => response.json())
-            .then(function(result){
-                if(result.data == null){
-                    addNewBudgetBtn.textContent = "New"
-                    budgetTitleInput.remove();
-                    clsbtn.remove()
-                    document.getElementById("error-message").textContent = result.error
-                    let timeout;
-                    clearTimeout(timeout);
-                    timeout = setTimeout(function(){
-                        document.getElementById("error-message").textContent =" "
-                    },3000)
-                }else{
-                    newlyAddedBudget = result.data
-                    addNewBudgetBtn.textContent = "New"
-                    budgetTitleInput.remove();
-                    clsbtn.remove()
-                    getSinglebudget(newlyAddedBudget.budget_id);
+                let dataParams = {
+                    method:'POST',
+                    body:JSON.stringify(newTitle),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
                 }
-               
-            });
-            
+                fetch('http://127.0.0.1:5000/budget', dataParams)
+                .then(response => response.json())
+                .then(function(result){
+                    if(result.data == null){
+                        addNewBudgetBtn.textContent = "New"
+                        budgetTitleInput.remove();
+                        clsbtn.remove()
+                        errorMessage(result.error)
+                    }else{
+                        newlyAddedBudget = result.data
+                        addNewBudgetBtn.textContent = "New"
+                        budgetTitleInput.remove();
+                        clsbtn.remove()
+                        getSinglebudget(newlyAddedBudget.budget_id);
+                    }
+                
+                });
+            }
         }
 
     });
@@ -224,4 +219,11 @@ window.addEventListener("load", () => {
     
     
    
-    
+function errorMessage(message){
+    document.getElementById("error-message").textContent = message
+    let timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){
+        document.getElementById("error-message").textContent =" "
+    },3000)
+}

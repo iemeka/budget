@@ -40,13 +40,7 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
-                                    document.getElementById("error-message").textContent = result.error
-                                    let timeout;
-                                    clearTimeout(timeout);
-                                    timeout = setTimeout(function(){
-                                        document.getElementById("error-message").textContent =" "
-                                    },3000)
-                                    
+                                    errorMessage(result.error)
                                 }else{
                                     let newData = result.data
                                     editBox.remove();
@@ -96,13 +90,7 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
-                                    document.getElementById("error-message").textContent = result.error
-                                    let timeout;
-                                    clearTimeout(timeout);
-                                    timeout = setTimeout(function(){
-                                        document.getElementById("error-message").textContent =" "
-                                    },3000)
-                                    
+                                    errorMessage(result.error)
                                 }else{
                                     let newData = result.data
                                     editCost.remove();
@@ -168,10 +156,6 @@ getAllExpenses = function (budgetId){
 }
 
 
-
-
-
-
 addNewExpenses = function(){
     let addNewExpenseBtn = document.getElementById("add-expense");
     let form = document.getElementById("add-expense-form")
@@ -207,6 +191,9 @@ addNewExpenses = function(){
         } else if ( addNewExpenseBtn.textContent == "Save"){
             let expenseTitleInput = document.getElementById("expense-title")
             let expenseCostInput = document.getElementById("expense-cost")
+            // if (expenseTitleInput.value == "" || expenseCostInput.value == ""){
+            //     errorMessage(result)
+            // } else{
             let clsbtn = document.getElementById("close-btn")
             let newExpenseData = {
                 'exp_title': expenseTitleInput.value,
@@ -228,12 +215,7 @@ addNewExpenses = function(){
                     expenseTitleInput.remove();
                     expenseCostInput.remove();
                     clsbtn.remove();
-                    document.getElementById("error-message").textContent = result.error
-                    let timeout;
-                    clearTimeout(timeout);
-                    timeout = setTimeout(function(){
-                        document.getElementById("error-message").textContent =" "
-                    },3000)
+                    errorMessage(result.error)                                                        
                 }else{
                     newlyAddedExpense = result.data
                     addNewExpenseBtn.textContent = "New"
@@ -242,9 +224,9 @@ addNewExpenses = function(){
                     clsbtn.remove()
                     getSingleEXpense(newlyAddedExpense.expense_id);
                 }
-               
-            })
             
+            })
+            // }   
         }
 
     });
@@ -286,3 +268,13 @@ window.addEventListener("load", () => {
     getAllExpenses(budgetId);
     addNewExpenses();
 });
+
+
+function errorMessage(message){
+    document.getElementById("error-message").textContent = message
+    let timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(function(){
+        document.getElementById("error-message").textContent =" "
+    },3000)
+}
