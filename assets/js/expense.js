@@ -14,7 +14,7 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                     event.stopPropagation()
                 })
                 editBox.focus()
-                fetch(`http://127.0.0.1:5000/expense/${expenseId}`, dataParams)
+                fetch(`https://dbudget-api-heroku.herokuapp.com/expense/${expenseId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     expenseTitle = result.data.expense_title
@@ -36,7 +36,7 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                                     'Accept': 'application/json'
                                 }
                             }
-                            fetch(`http://127.0.0.1:5000/expenses/title/${budgetId}/${expenseId}`, dataParams)
+                            fetch(`https://dbudget-api-heroku.herokuapp.com/expenses/title/${budgetId}/${expenseId}`, dataParams)
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
@@ -65,7 +65,7 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                     event.stopPropagation()
                 })
                 editCost.focus()
-                fetch(`http://127.0.0.1:5000/expense/${expenseId}`, dataParams)
+                fetch(`https://dbudget-api-heroku.herokuapp.com/expense/${expenseId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     expenseCost = result.data.expense_cost
@@ -86,7 +86,7 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                                     'Accept': 'application/json'
                                 }
                             }
-                            fetch(`http://127.0.0.1:5000/expenses/cost/${budgetId}/${expenseId}`, dataParams)
+                            fetch(`https://dbudget-api-heroku.herokuapp.com/expenses/cost/${budgetId}/${expenseId}`, dataParams)
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
@@ -115,7 +115,7 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                         'Accept': 'application/json'
                     }
                 }
-                fetch(`http://127.0.0.1:5000/expenses/${expenseId}`, dataParams)
+                fetch(`https://dbudget-api-heroku.herokuapp.com/expenses/${expenseId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     let delRow = document.getElementById("row-"+expenseId);
@@ -135,7 +135,7 @@ getAllExpenses = function (budgetId){
             'Accept': 'application/json'
         }
     }
-    fetch(`http://127.0.0.1:5000/expenses/${budgetId}`, dataParams)
+    fetch(`https://dbudget-api-heroku.herokuapp.com/expenses/${budgetId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
         let table = document.getElementsByTagName("table")[0]
@@ -207,7 +207,7 @@ addNewExpenses = function(){
                     'Accept': 'application/json'
                 }
             }
-            fetch(`http://127.0.0.1:5000/expenses/${budgetId}`, dataParams)
+            fetch(`https://dbudget-api-heroku.herokuapp.com/expenses/${budgetId}`, dataParams)
             .then(response => response.json())
             .then(function(result){
                 if(result.data == null){
@@ -242,7 +242,7 @@ getSingleEXpense = function (expenseId){
             'Accept': 'application/json'
         }
     }
-    fetch(`http://127.0.0.1:5000/expense/${expenseId}`, dataParams)
+    fetch(`https://dbudget-api-heroku.herokuapp.com/expense/${expenseId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
         let table = document.getElementsByTagName("table")[0]
@@ -259,6 +259,12 @@ getSingleEXpense = function (expenseId){
         }
     });
 }
+
+
+clsExp = document.getElementById('close-expense')
+clsExp.addEventListener('click', ()=>{
+    return window.location.replace('http://localhost:8000/budget.html');
+}) 
    
 
 window.addEventListener("load", () => {
