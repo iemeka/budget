@@ -15,12 +15,12 @@ button.addEventListener("click", () => {
             'Accept': 'application/json'
         }
     }
-    fetch('http://127.0.0.1:5000/signup', dataParams)
+    fetch('https://dbudget-api-heroku.herokuapp.com/signup', dataParams)
     .then(response => response.json())
     .then(function(result){
         if (result.data == null){
             return document.getElementById('error-message').textContent = result.error
         }
-        return window.location.replace('http://localhost:8000/budget.html')
+        return window.location.replace('https://dbudget-api-heroku.herokuapp.com/budget.html')
     });
 });
