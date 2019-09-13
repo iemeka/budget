@@ -1,5 +1,5 @@
 // create rows of data
-createRows = function(dataParams,table,budgetId,budgetTitle,row){
+createRows = function(dataParams,table,budgetId,budgetTitle,row,indicator){
     for(let j=0; j< 3; j++){
         if (j==0){
             let field = document.createElement("td");
@@ -55,8 +55,20 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row){
             
         } else if (j==1){
             let field = document.createElement("td");
-            field.textContent = budgetId
             row.append(field)
+            fetch(`http://127.0.0.1:5000/budgets/costs/${budgetId}`, dataParams)
+            .then(response => response.json())
+            .then(function(result){
+                let oneData = result.data
+                if(oneData[1] != null){
+                    field.textContent = oneData[1].total
+                }else{
+                    field.textContent = oneData[0].total
+                }
+
+                
+            })
+            
         } else if (j==2){
             let field = document.createElement("td");
             let delBtn = document.createElement("button")
@@ -108,11 +120,13 @@ getAllbudgets = function (){
             return window.location.replace('http://localhost:8000/index.html')
         }else{
             for(let item of result.data){
-                let budgetId = item.budget_id;
                 let budgetTitle = item.budget_title
+                let budgetId = item.budget_id
                 let row = document.createElement("tr");
                 row.setAttribute("id","row-"+budgetId)
-                createRows(dataParams,table,budgetId,budgetTitle,row)
+                createRows(dataParams,table,budgetId,budgetTitle,row,indicator=1)
+
+                
             }
         }
         
@@ -206,7 +220,7 @@ getSinglebudget = function (budgetId){
             let budgetTitle = item.budget_title;
             let row = document.createElement("tr");
             row.setAttribute("id","row-"+budgetId);
-            createRows(dataParams,table,budgetId,budgetTitle,row);
+            createRows(dataParams,table,budgetId,budgetTitle,row,indicator=0);
         }
     });
 }

@@ -40,6 +40,8 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
+                                    editBox.remove();
+                                    field.textContent = expenseTitle
                                     errorMessage(result.error)
                                 }else{
                                     let newData = result.data
@@ -91,6 +93,8 @@ createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle
                             .then(function(result){
                                 if (result.data == null){
                                     errorMessage(result.error)
+                                    editCost.remove();
+                                    field.textContent = expenseCost;
                                 }else{
                                     let newData = result.data
                                     editCost.remove();
