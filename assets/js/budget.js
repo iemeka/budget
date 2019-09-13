@@ -14,7 +14,7 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row){
                     event.stopPropagation()
                 })
                 editBox.focus()
-                fetch(`https://dbudget-api-heroku.herokuapp.com/budget/${budgetId}`, dataParams)
+                fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     budgetTitle = result.data.budget_title;
@@ -35,7 +35,7 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row){
                                     'Accept': 'application/json'
                                 }
                             }
-                            fetch(`https://dbudget-api-heroku.herokuapp.com/budget/${budgetId}`, dataParams)
+                            fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
@@ -74,7 +74,7 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row){
                         'Accept': 'application/json'
                     }
                 }
-                fetch(`https://dbudget-api-heroku.herokuapp.com/budget/${budgetId}`, dataParams)
+                fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     let delRow = document.getElementById("row-"+budgetId);
@@ -100,7 +100,7 @@ getAllbudgets = function (){
             'Accept': 'application/json'
         }
     }
-    fetch('https://dbudget-api-heroku.herokuapp.com/budget', dataParams)
+    fetch('http://127.0.0.1:5000/budget', dataParams)
     .then(response => response.json())
     .then(function(result){
         let table = document.getElementsByTagName("table")[0]
@@ -160,7 +160,7 @@ addNewBudget = function(){
                         'Accept': 'application/json'
                     }
                 }
-                fetch('https://dbudget-api-heroku.herokuapp.com/budget', dataParams)
+                fetch('http://127.0.0.1:5000/budget', dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     if(result.data == null){
@@ -194,7 +194,7 @@ getSinglebudget = function (budgetId){
             'Accept': 'application/json'
         }
     }
-    fetch(`https://dbudget-api-heroku.herokuapp.com/budget/${budgetId}`, dataParams)
+    fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
         let table = document.getElementsByTagName("table")[0];
