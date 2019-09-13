@@ -64,9 +64,7 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row,indicator){
                     field.textContent = oneData[1].total
                 }else{
                     field.textContent = oneData[0].total
-                }
-
-                
+                }    
             })
             
         } else if (j==2){
@@ -229,8 +227,25 @@ getSinglebudget = function (budgetId){
 window.addEventListener("load", () => {
     getAllbudgets();
     addNewBudget();
+    getTotalBudgetCost();
 });
-    
+
+function getTotalBudgetCost(){
+    let dataParams = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    }
+    fetch('http://127.0.0.1:5000/budgets/costs', dataParams)
+    .then(response => response.json())
+    .then(function(result){
+        let total = result.data.pop()
+        document.getElementById('total-cost').textContent = total.total
+
+    })
+}
     
 
 function errorMessage(message){
