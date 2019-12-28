@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="emeka">
+        <meta name="description" content="budget app">
+        <title>budget</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <aside>
+                <header>
+                    <h1>budget image</h1>
+                    <span id="total-cost"></span>
+                </header>
+                <section id="article-holder">
+                    <!-- <article>
+                        <h3><span>budget title</span> <span class="budget-cost">5840.00</span></h3>
+                        <button>Open</button><button>delete</button>
+                    </article> -->
+                    <!-- <article>
+                        n edit create input inside h3 
+                        <h3><span><input value="budget title" id="edit-budget-title-input" type=text></span> <span>5840.00</span></h3>
+                        <button>Open</button> <button>delete</button>
+                    </article> -->
+                    <form id="budget-form">
+                        <!-- <input id="new-budget-input" type="text" placeholder="enter budget title">
+                        <button>close</button> -->
+                    </form>
+                </section>
+                <button id="add-budget">New</button>
+            </aside>
+            <div>
+                <header>
+                    <h2>
+                        <span id="budget-title-header">budget title: </span><span id="budget-cost-header">00.00</span>
+                    </h2>
+                    <button id="close-expense">close</button>
+                </header>
+                <section>
+                    <table id="table-header-wrapper">
+                        <tr id="table-header">
+                            <th>title</th>
+                            <th>total</th>
+                            <th>action</th>
+                        </tr>
+                    </table>
+                    <table id="table">
+                        <tr>
+                            <td>click open to see expenses</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>to edit title or cost, click text</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                  
+                        
+                        <!-- <tr>
+                            on edit 
+                            <td><input class="edit-expense" type="text" value="expenses"></td>
+                            <td> <input class="edit-expense" type="text" value="54938.00"></td>
+                            <td><button>delete</button></td>
+                        </tr> -->
+                    </table>
+                    <form id="new-expense-form">
+                        <!-- <input class="new-expense-input" type="text" placeholder="enter expense title">
+                        <input class="new-expense-input" type="text" placeholder="enter expense cost">
+                        <button>close</button> -->
+                    </form>
+                </section>
+                <!-- <button id="add-expense">New</button> -->
+            </div>
+            <footer>
+                <span id="error-message" style="color:#fff"></span>
+            </footer>
+        </div>
+        <script src="assets/js/budget.js"></script>
+        <script src="assets/js/expense.js"></script>
+    </body>
+</html>

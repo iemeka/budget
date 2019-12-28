@@ -1,5 +1,6 @@
 // create rows
-createExpenseRows = function(dataParams,table,expenseId,expenseCost,expenseTitle,row){
+createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,expenseTitle,row){
+    
     for(let j=0; j<3; j++){
         if (j==0){
             let field = document.createElement("td");
@@ -142,7 +143,7 @@ getAllExpenses = function (budgetId){
     fetch(`http://127.0.0.1:5000/expenses/${budgetId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
-        let table = document.getElementsByTagName("table")[0]
+        let table = document.getElementsByTagName("table")[1]
         if (result.data == null){
             return window.location.replace('http://localhost:8000/index.html')
         }else{
@@ -153,34 +154,40 @@ getAllExpenses = function (budgetId){
                 let expenseTitle = item.expense_title
                 let row = document.createElement("tr");
                 row.setAttribute("id","row-"+expenseId);
-                createExpenseRows(dataParams,table,expenseId,expenseCost,expenseTitle,row)
+                row.setAttribute("class",budgetId);
+                createExpenseRows(budgetId,dataParams,table,expenseId,expenseCost,expenseTitle,row)
             }
         }
     });
+    let addNewExpenseBtn = document.createElement("button");
+    let expenseSide = document.querySelector("aside+div");
+    addNewExpenseBtn.textContent = "New";
+    addNewExpenseBtn.setAttribute("id","add-expense");
+    expenseSide.appendChild(addNewExpenseBtn)
+    addNewExpenses(budgetId)
 }
 
 
-addNewExpenses = function(){
-    let addNewExpenseBtn = document.getElementById("add-expense");
-    let form = document.getElementById("add-expense-form")
+addNewExpenses = function(budgetId){
+    let addNewExpenseBtn = document.getElementById("add-expense")
+    let form = document.getElementById("new-expense-form")
     
-    addNewExpenseBtn.addEventListener("click", () => {
-
+    addNewExpenseBtn.addEventListener("click", () =>{
         if (addNewExpenseBtn.textContent == "New"){
             let titleInput = document.createElement("input")
             let costInput = document.createElement("input")
-            let clsbtn = document.createElement("input")
+            let clsbtn = document.createElement("button")
             
             clsbtn.textContent = "close"
             titleInput.setAttribute("type","text")
             titleInput.setAttribute("id","expense-title")
-            titleInput.setAttribute("placeholder","Expense Title")
+            titleInput.setAttribute("class","new-expense-input");
+            titleInput.setAttribute("placeholder","enter expense title")
             costInput.setAttribute("type","text")
             costInput.setAttribute("id","expense-cost")
-            costInput.setAttribute("placeholder","Expense Cost")
+            costInput.setAttribute("class","new-expense-input");
+            costInput.setAttribute("placeholder","enter expense cost")
             clsbtn.setAttribute("id","close-btn")
-            clsbtn.setAttribute("type","button")
-            clsbtn.setAttribute("value","close")
             clsbtn.addEventListener('click', function(){
                 addNewExpenseBtn.textContent = "New"
                 titleInput.remove();
@@ -226,7 +233,8 @@ addNewExpenses = function(){
                     expenseTitleInput.remove();
                     expenseCostInput.remove();
                     clsbtn.remove()
-                    getSingleEXpense(newlyAddedExpense.expense_id);
+                    getSingleEXpense(budgetId, newlyAddedExpense.expense_id);
+                    
                 }
             
             })
@@ -238,7 +246,7 @@ addNewExpenses = function(){
 
 
 
-getSingleEXpense = function (expenseId){ 
+getSingleEXpense = function (budgetId, expenseId){ 
     let dataParams = {
         method: 'GET',
         headers: {
@@ -249,7 +257,7 @@ getSingleEXpense = function (expenseId){
     fetch(`http://127.0.0.1:5000/expense/${expenseId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
-        let table = document.getElementsByTagName("table")[0]
+        let table = document.getElementsByTagName("table")[1]
         if (result.data == null){
             return window.location.replace('http://localhost:8000/index.html')
         }else{
@@ -259,7 +267,9 @@ getSingleEXpense = function (expenseId){
             let expenseTitle = item.expense_title
             let row = document.createElement("tr");
             row.setAttribute("id","row-"+expenseId);
-            createExpenseRows(dataParams,table,expenseId,expenseCost,expenseTitle,row)
+            createExpenseRows(budgetId,dataParams,table,expenseId,expenseCost,expenseTitle,row)
+            getTotalBudgetCost();
+            getIndividualBudgetCost(budgetId);
         }
     });
 }
@@ -267,18 +277,9 @@ getSingleEXpense = function (expenseId){
 
 clsExp = document.getElementById('close-expense')
 clsExp.addEventListener('click', ()=>{
-    return window.location.replace('http://localhost:8000/budget.html');
+    return window.location.replace('http://localhost:8000/app.html');
 }) 
    
-
-window.addEventListener("load", () => {
-    let url = window.location.href
-    budgetId = url.split("?")[1]
-
-    getAllExpenses(budgetId);
-    addNewExpenses();
-});
-
 
 function errorMessage(message){
     document.getElementById("error-message").textContent = message

@@ -1,15 +1,17 @@
 // create rows of data
-createRows = function(dataParams,table,budgetId,budgetTitle,row,indicator){
+createArticles = function(dataParams,articleHolder,budgetId,budgetTitle,article,indicator){
+    let h3 = document.createElement("h3")
     for(let j=0; j< 3; j++){
         if (j==0){
-            let field = document.createElement("td");
-            field.textContent = budgetTitle;
-            row.append(field)
-            field.addEventListener('click', ()=>{
+            let span = document.createElement("span");
+            h3.append(span)
+            span.textContent = budgetTitle;
+            span.addEventListener('click', ()=>{
                 let editBox = document.createElement("input")
-                field.textContent = " "
+                span.textContent = " "
                 editBox.setAttribute("type", "text")
-                field.appendChild(editBox)
+                editBox.setAttribute("id", "edit-budget-title-input")
+                span.appendChild(editBox)
                 editBox.addEventListener('click', event =>{
                     event.stopPropagation()
                 })
@@ -22,7 +24,7 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row,indicator){
                     editBox.addEventListener('blur',()=>{
                         if (editBox.value == budgetTitle){
                             editBox.remove()
-                            field.textContent = budgetTitle
+                            span.textContent = budgetTitle
                         }else{
                             let data = {
                                 'budget_title': editBox.value,
@@ -41,11 +43,11 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row,indicator){
                                 if (result.data == null){
                                     errorMessage(result.error)
                                     editBox.remove();
-                                    field.textContent = budgetTitle
+                                    span.textContent = budgetTitle
                                 }else{
                                     let newData = result.data
                                     editBox.remove();
-                                    field.textContent = newData.budget_title
+                                    span.textContent = newData.budget_title
                                 }
                             })
                         }
@@ -54,28 +56,30 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row,indicator){
             });
             
         } else if (j==1){
-            let field = document.createElement("td");
-            row.append(field)
+            let span = document.createElement("span");
+            span.setAttribute("id",budgetId)
+            h3.append(span)
+            article.append(h3)
             fetch(`http://127.0.0.1:5000/budgets/costs/${budgetId}`, dataParams)
             .then(response => response.json())
             .then(function(result){
                 let oneData = result.data
                 if(oneData[1] != null){
-                    field.textContent = oneData[1].total
+                    span.textContent = oneData[1].total
                 }else{
-                    field.textContent = oneData[0].total
+                    span.textContent = oneData[0].total
+                    
+
                 }    
             })
             
         } else if (j==2){
-            let field = document.createElement("td");
             let delBtn = document.createElement("button")
             let openBtn = document.createElement("button")
             delBtn.textContent="delete"
             openBtn.textContent="open"
-            field.appendChild(delBtn)
-            field.appendChild(openBtn)
-            row.appendChild(field)
+            article.appendChild(openBtn)
+            article.appendChild(delBtn)
             delBtn.addEventListener('click', () => {
                 let dataParams = {
                     method:'DELETE',
@@ -87,18 +91,44 @@ createRows = function(dataParams,table,budgetId,budgetTitle,row,indicator){
                 fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
-                    let delRow = document.getElementById("row-"+budgetId);
+                    let delRow = document.getElementById("article-"+budgetId);
                     delRow.remove();
                 });
             });
-
             openBtn.addEventListener('click', ()=> {
-                return window.location.replace(`http://localhost:8000/expense.html?${budgetId}`)
+                let addNewExpenseBtn = document.getElementById("add-expense")
+                let oldRows = document.querySelectorAll(`tr:not(#table-header)`);
+                let titleField = document.getElementById("budget-title-header")
+                let exTitle = document.getElementById("expense-title")
+                let exCost = document.getElementById("expense-cost")
+                let exClsbtn = document.getElementById("close-btn")
+
+                titleField.textContent = budgetTitle + ": "
+                let costField = document.getElementById("budget-cost-header")
+                let cost = document.getElementById(`${budgetId}`)
+                costField.textContent = cost.textContent
+                for(let row of oldRows){
+                    row.remove()
+                }
+                if (addNewExpenseBtn != null){
+                    addNewExpenseBtn.remove();
+                }
+                if (exTitle != null && exCost != null && exClsbtn != null ){
+                    exTitle.remove()
+                    exCost.remove()
+                    exClsbtn.remove()
+                }
+
+                return getAllExpenses(budgetId);
+                           
             })
         }
         
     }
-    table.append(row);
+    let form = document.getElementById('budget-form')
+    
+    articleHolder.append(article);
+    articleHolder.insertBefore(article,form);
 }
 
 // get all budget from data base
@@ -113,16 +143,16 @@ getAllbudgets = function (){
     fetch('http://127.0.0.1:5000/budget', dataParams)
     .then(response => response.json())
     .then(function(result){
-        let table = document.getElementsByTagName("table")[0]
+        let articleHolder = document.getElementById("article-holder")
         if (result.data == null){
             return window.location.replace('http://localhost:8000/index.html')
         }else{
             for(let item of result.data){
                 let budgetTitle = item.budget_title
                 let budgetId = item.budget_id
-                let row = document.createElement("tr");
-                row.setAttribute("id","row-"+budgetId)
-                createRows(dataParams,table,budgetId,budgetTitle,row,indicator=1)
+                let article = document.createElement("article");
+                article.setAttribute("id","article-"+budgetId)
+                createArticles(dataParams,articleHolder,budgetId,budgetTitle,article,indicator=1)
 
                 
             }
@@ -134,17 +164,16 @@ getAllbudgets = function (){
 // add new budget to data base
 addNewBudget = function(){
     let addNewBudgetBtn = document.getElementById("add-budget");
-    let form = document.getElementById("add-budget-form")
+    let form = document.getElementById("budget-form")
     addNewBudgetBtn.addEventListener("click", () => {
         if ( addNewBudgetBtn.textContent == "New"){
             let input = document.createElement("input")
-            let clsbtn = document.createElement("input")
+            let clsbtn = document.createElement("button")
             clsbtn.textContent = "close"
             input.setAttribute("type","text")
-            input.setAttribute("id","budget-title")
+            input.setAttribute("id","new-budget-input")
+            input.setAttribute("placeholder", "enter budget title")
             clsbtn.setAttribute("id","close-btn")
-            clsbtn.setAttribute("type","button")
-            clsbtn.setAttribute("value","close")
             clsbtn.addEventListener('click', function(){
                 addNewBudgetBtn.textContent = "New"
                 input.remove();
@@ -155,7 +184,7 @@ addNewBudget = function(){
             input.focus()
             addNewBudgetBtn.textContent = "Save"
         } else if ( addNewBudgetBtn.textContent == "Save"){
-            let budgetTitleInput = document.getElementById("budget-title")
+            let budgetTitleInput = document.getElementById("new-budget-input")
             if (budgetTitleInput == ""){
                 errorMessage(result.error)
             }else{
@@ -209,16 +238,16 @@ getSinglebudget = function (budgetId){
     fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
-        let table = document.getElementsByTagName("table")[0];
+        let articleHolder = document.getElementById("article-holder")
         if (result.data == null){
             return window.location.replace('http://localhost:8000/index.html');
         }else{
             let item = result.data;
             let budgetId = item.budget_id;
             let budgetTitle = item.budget_title;
-            let row = document.createElement("tr");
-            row.setAttribute("id","row-"+budgetId);
-            createRows(dataParams,table,budgetId,budgetTitle,row,indicator=0);
+            let article = document.createElement("article");
+            article.setAttribute("id","article-"+budgetId)
+            createArticles(dataParams,articleHolder,budgetId,budgetTitle,article,indicator=1)
         }
     });
 }
@@ -245,6 +274,32 @@ function getTotalBudgetCost(){
         document.getElementById('total-cost').textContent = total.total
 
     })
+}
+
+function getIndividualBudgetCost(budgetId){
+    let span = document.getElementById(budgetId)
+    let costField = document.getElementById("budget-cost-header")
+    let dataParams = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    }
+    fetch(`http://127.0.0.1:5000/budgets/costs/${budgetId}`, dataParams)
+    .then(response => response.json())
+    .then(function(result){
+        let oneData = result.data
+        if(oneData[1] != null){
+            span.textContent = oneData[1].total
+            costField.textContent = oneData[1].total
+        }else{
+            span.textContent = oneData[0].total
+            costField.textContent = oneData[0].total
+        }    
+    })
+    
+    
 }
     
 

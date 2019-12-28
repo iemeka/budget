@@ -1,0 +1,339 @@
+.wrap{
+    width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrap aside{
+    height: 600px;
+    width: 300px;
+    float: left;
+    background-color: #1d232aff;
+
+}
+
+.wrap aside header{
+    border-bottom: 1px solid #ffffffff;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.wrap aside header h1{
+    display: inline-block;
+    text-indent: -99999px;
+    height:40px;
+    width: 100px;
+    background: url('../img/mock-up/main/logo.png') no-repeat;
+    background-size: 100% auto;
+    float: left;
+}
+
+.wrap aside header span{
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    float: right;
+    font-family: monospace;
+    font-size: 13px;
+    min-width: 100px;
+    height: 15px;
+    padding: 5px;
+    margin-top:7px;
+    border-radius: 3px;
+}
+
+.wrap aside header + section{
+    border-right:1px solid #fff;
+    height: 435px;
+    overflow: scroll;
+    padding-bottom: 40px;
+}
+
+.wrap aside header + section article{
+    border-bottom: 1px solid #9da1a6ff;
+    padding: 5px 10px;
+}
+
+@-webkit-keyframes hoverEffect{
+
+}
+
+.wrap aside header + section article:hover{
+    background-color: black;
+}
+
+.wrap aside header + section article h3{
+    color:#fff;
+    font-family: helvetica;
+    text-transform: capitalize;
+    font-size:17px;
+    font-weight: normal;
+}
+
+.wrap aside header + section article h3 span:nth-child(2){
+    float: right;
+}
+
+#edit-budget-title-input{
+    width: 150px;
+    font-display: monospace;
+    border:1px solid #fff;
+    background-color:transparent;
+    color:#fff;
+    font-size:14px;
+    padding:3px;
+}
+
+#budget-form{
+    text-align: center
+}
+
+#new-budget-input{
+    text-align: center;
+    margin-top: 7px !important;
+    border: none;
+    width: 170px;
+    font-family: monospace;
+    font-size: 14px;
+    padding:3px;
+    background-color: transparent;
+    border:1px solid #fff;
+    color: #fff
+}
+
+#new-budget-input + button{
+    border: 1px solid #9da1a6ff;
+    color: #9da1a6ff;
+    background: transparent;
+    margin:3px 0px;
+    text-transform: capitalize;
+    padding: 3px 0;
+    width:50px;
+    font-weight: bold;
+}
+
+.wrap aside header + section article button{
+    border: 1px solid #9da1a6ff;
+    color: #9da1a6ff;
+    font-weight: bold;
+    background: transparent;
+    margin:3px 0px;
+    text-transform: capitalize;
+    padding: 2px 0;
+    width:50px;
+}
+
+.wrap aside header + section article button + button, #new-budget-input + button{
+    margin-left:3px
+}
+
+.wrap aside header + section + button{
+    border: 0px;
+    color: #fff;
+    background: transparent;
+    margin:auto;
+    display: block;
+    margin-top:15px;
+    font-family: helvetica;
+    text-transform: capitalize;
+    font-size:13px;
+    font-weight: bold;
+    width: 90px;
+    height: 25px;
+    background-color: #2263b0ff;
+    color:#fff;
+    border-radius: 3px;
+}
+
+.wrap aside + div{
+    height: 600px;
+    width: 500px;
+    float: left;
+    background-color: #f0f1f4ff;
+}
+
+.wrap aside + div header{
+    border-bottom: 1px solid #ffffffff;
+    height: 70px;
+    
+}
+
+.wrap aside + div header h2{
+    border-bottom: 3px double rgb(185, 187, 189);
+    padding-bottom: 3px;
+    display: inline-block;
+    text-align: center;
+    margin-top:25px !important;
+    margin-left: 25px;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size:15px;
+    float: left;
+    font-weight: normal;
+
+}
+
+.wrap aside + div header button{
+    display: inline-block;
+    margin-top:25px;
+    margin-right: 25px;
+    font-family: helvetica;
+    text-transform: capitalize;
+    font-size:13px;
+    font-weight: bold;
+    width: 90px;
+    height: 25px;
+    float: right;
+    background-color: #6b3781ff;
+    color:#fff;
+    border: 0px;
+    border-radius: 3px;
+
+}
+
+.wrap aside + div header + section{
+    background-color: #f0f1f4ff;
+    border-bottom:1px solid #fff;
+    height: 431px;
+    padding-top:25px !important;
+    padding: 15px;
+    padding-bottom: 20px;
+    overflow: scroll;
+    position: relative;
+}
+
+/* #table-header-wrapper{
+    
+
+} */
+
+
+#table{
+    text-align: left !important;
+    margin: auto;
+}
+
+#table-header{
+    position: fixed;
+    width:455px;
+    background-color: #f0f1f4ff;
+    padding-top:3px;
+    top:121px;
+    border-bottom: 1px solid #1d232aff;
+    box-shadow:  0 4px 3px -3px rgb(119, 111, 111);
+
+}
+
+#table-header-wrapper tr th{
+    width: 250px;
+    vertical-align: middle;
+}
+
+
+#table-header-wrapper tr th{
+    /* border :1px solid black; */
+    text-align: left;
+    padding-left: 5px;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    
+}
+
+#table tr > td:nth-child(1){
+    width: 300px;
+    vertical-align: middle;
+}
+
+#table-header-wrapper tr > th + th,
+#table tr > td + td {
+    vertical-align: middle;
+    width: 100px
+}
+
+#table td{
+    padding: 5px;
+    background-color: #fff;
+    border-bottom: 2px solid #f0f1f4ff;
+    font-family: helvetica;
+    text-transform: capitalize;
+    font-size: 15px;
+
+}
+
+#table tr td button{
+    font-family: helvetica;
+    text-transform: capitalize;
+    font-size:13px;
+    font-weight: bold;
+    width: 90px;
+    height: 25px;
+    background-color: #800000ff;
+    color:#fff;
+    border: 0px;
+    border-radius: 3px;
+}
+
+.edit-expense{
+    width: 150px;
+    font-display: monospace;
+    font-size:15px;
+    padding:3px;
+    border:solid 2px rgb(210, 211, 214);
+    /* background-color: #f0f1f4ff */
+}
+
+#new-expense-form{
+    text-align: center;
+    margin-top:5px;
+}
+
+#expense-cost, #close-btn{
+    margin-left: 3px;
+} 
+
+.new-expense-input{
+    font-size: 15px;
+    text-align: center;
+    width:150px;
+    padding:3px;
+    background-color: transparent;
+    border:1px solid #000;
+}
+
+.new-expense-input + button{
+    border: 1px solid #000;
+    color: black;
+    background: transparent;
+    margin:3px 0px;
+    text-transform: capitalize;
+    padding: 3px 0;
+    width:50px;
+    font-weight: bold;
+}
+
+header + section + button{
+    display: block;
+    margin-top:15px !important;
+    margin:auto;
+    font-family: helvetica;
+    text-transform: capitalize;
+    font-size:13px;
+    font-weight: bold;
+    width: 90px;
+    height: 25px;
+    background-color: #37bc4aff;
+    color:#fff;
+    border: 0px;
+    border-radius: 3px;
+}
+
+aside+div+footer{
+    height: 28px;
+    width: 100%;
+    float: left;
+    background-color: black;
+}
