@@ -48,6 +48,7 @@ createArticles = function(dataParams,articleHolder,budgetId,budgetTitle,article,
                                     let newData = result.data
                                     editBox.remove();
                                     span.textContent = newData.budget_title
+                                    document.getElementById("budget-title-header").textContent = newData.budget_title+": "
                                 }
                             })
                         }
@@ -101,7 +102,7 @@ createArticles = function(dataParams,articleHolder,budgetId,budgetTitle,article,
                 let titleField = document.getElementById("budget-title-header")
                 let exTitle = document.getElementById("expense-title")
                 let exCost = document.getElementById("expense-cost")
-                let exClsbtn = document.getElementById("close-btn")
+                let exClsbtn = document.getElementById("exp-close-btn")
 
                 titleField.textContent = budgetTitle + ": "
                 let costField = document.getElementById("budget-cost-header")
@@ -254,6 +255,7 @@ getSinglebudget = function (budgetId){
 
 
 window.addEventListener("load", () => {
+    getUserName();
     getAllbudgets();
     addNewBudget();
     getTotalBudgetCost();
@@ -301,13 +303,22 @@ function getIndividualBudgetCost(budgetId){
     
     
 }
+
+function getUserName(){
+    let url = window.location.href
+    name = url.split('?')[1]
+    document.getElementById("user").textContent = name
+}
     
 
 function errorMessage(message){
-    document.getElementById("error-message").textContent = message
+    document.getElementById("error-message").textContent = message;
+    let indicator = document.getElementById("noti-circle");
+    indicator.style.backgroundColor = "red";
     let timeout;
     clearTimeout(timeout);
     timeout = setTimeout(function(){
-        document.getElementById("error-message").textContent =" "
+        document.getElementById("error-message").textContent =" ";
+        indicator.style.backgroundColor = "white";
     },3000)
 }

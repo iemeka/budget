@@ -100,6 +100,8 @@ createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,exp
                                     let newData = result.data
                                     editCost.remove();
                                     field.textContent = newData.expense_cost
+                                    getTotalBudgetCost()
+                                    getIndividualBudgetCost(budgetId)
                                 }
                             });
                         }
@@ -125,6 +127,8 @@ createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,exp
                 .then(function(result){
                     let delRow = document.getElementById("row-"+expenseId);
                     delRow.remove();
+                    getTotalBudgetCost()
+                    getIndividualBudgetCost(budgetId)
                 });
             });
         }
@@ -187,7 +191,7 @@ addNewExpenses = function(budgetId){
             costInput.setAttribute("id","expense-cost")
             costInput.setAttribute("class","new-expense-input");
             costInput.setAttribute("placeholder","enter expense cost")
-            clsbtn.setAttribute("id","close-btn")
+            clsbtn.setAttribute("id","exp-close-btn")
             clsbtn.addEventListener('click', function(){
                 addNewExpenseBtn.textContent = "New"
                 titleInput.remove();
@@ -205,7 +209,7 @@ addNewExpenses = function(budgetId){
             // if (expenseTitleInput.value == "" || expenseCostInput.value == ""){
             //     errorMessage(result)
             // } else{
-            let clsbtn = document.getElementById("close-btn")
+            let clsbtn = document.getElementById("exp-close-btn")
             let newExpenseData = {
                 'exp_title': expenseTitleInput.value,
                 'exp_cost': expenseCostInput.value
@@ -281,11 +285,14 @@ clsExp.addEventListener('click', ()=>{
 }) 
    
 
-function errorMessage(message){
-    document.getElementById("error-message").textContent = message
-    let timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(function(){
-        document.getElementById("error-message").textContent =" "
-    },3000)
-}
+// function errorMessage(message){
+//     document.getElementById("error-message").textContent = message;
+//     let indicator = document.getElementById("noti-circle");
+//     indicator.style.backgroundColor = "red";
+//     let timeout;
+//     clearTimeout(timeout);
+//     timeout = setTimeout(function(){
+//         document.getElementById("error-message").textContent =" ";
+//         indicator.style.backgroundColor = "white";
+//     },3000)
+// }

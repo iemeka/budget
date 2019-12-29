@@ -21,7 +21,7 @@ button.addEventListener("click", () => {
         if (result.data == null){
             return document.getElementById('error-message').textContent = result.error
         }
-        return window.location.replace('http://localhost:8000/app.html')
+        return window.location.replace(`http://localhost:8000/app.html?${username}`)
     });
 });
 
