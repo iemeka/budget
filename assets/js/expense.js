@@ -278,11 +278,13 @@ getSingleEXpense = function (budgetId, expenseId){
     });
 }
 
-
-clsExp = document.getElementById('close-expense')
-clsExp.addEventListener('click', ()=>{
-    return window.location.replace('http://localhost:8000/app.html');
-}) 
+function closeExpenses(username){
+    clsExp = document.getElementById('close-expense')
+    clsExp.addEventListener('click', ()=>{
+        return window.location.replace(`http://localhost:8000/app.html?${username}`);
+    }) 
+}
+    
    
 
 // function errorMessage(message){

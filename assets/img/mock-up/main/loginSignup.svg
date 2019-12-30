@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,15 +10,24 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="289.15558mm"
+   width="289.81091mm"
    height="210.00818mm"
-   viewBox="0 0 289.15558 210.00818"
+   viewBox="0 0 289.81091 210.00818"
    version="1.1"
    id="svg8"
    sodipodi:docname="loginSignup.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <defs
-     id="defs2" />
+     id="defs2">
+    <linearGradient
+       id="linearGradient3581"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3579" />
+    </linearGradient>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,9 +35,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.74953319"
-     inkscape:cx="660.806"
-     inkscape:cy="329.32574"
+     inkscape:zoom="0.53"
+     inkscape:cx="514.49094"
+     inkscape:cy="412.83125"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -40,7 +50,9 @@
      inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
-       id="grid970" />
+       id="grid970"
+       originx="0.42013308"
+       originy="0.3073517" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -58,313 +70,387 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-4.1577382,-90.625008)">
+     transform="translate(-3.7376051,-90.932358)"
+     style="display:inline">
     <rect
-       style="opacity:1;fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.57524377;stroke-miterlimit:4;stroke-dasharray:0.05752438, 0.05752438;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect21"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.824;stroke-miterlimit:4;stroke-dasharray:0.0824, 0.0824;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4227"
        width="289.15179"
        height="210.00818"
-       x="5.0399103"
-       y="90.272011" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:'Smile of the Ocean';-inkscape-font-specification:'Smile of the Ocean';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="14.363094"
-       y="103.4762"
-       id="text839"><tspan
-         sodipodi:role="line"
-         id="tspan837"
-         x="14.363094"
-         y="110.87955"
-         style="fill:#ffffff;stroke-width:0.26458332" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:'Smile of the Ocean';-inkscape-font-specification:'Smile of the Ocean';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="22.678572"
-       y="89.869049"
-       id="text843"><tspan
-         sodipodi:role="line"
-         id="tspan841"
-         x="22.678572"
-         y="97.2724"
-         style="stroke-width:0.26458332" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.32915878px;line-height:1.25;font-family:'Smile of the Ocean';-inkscape-font-specification:'Smile of the Ocean';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.54153621"
-       x="10.853128"
-       y="97.854706"
-       id="text847"
-       transform="scale(0.90859745,1.1005974)"><tspan
-         sodipodi:role="line"
-         id="tspan845"
-         x="10.853128"
-         y="97.854706"
-         style="fill:#ffffff;stroke-width:0.54153621">Budget </tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="55.940475"
-       y="139.57291"
-       id="text884"><tspan
-         sodipodi:role="line"
-         id="tspan882"
-         x="55.940475"
-         y="147.06392"
-         style="stroke-width:0.26458332" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-60.098213"
-       y="174.53572"
-       id="text995"><tspan
-         sodipodi:role="line"
-         id="tspan993"
-         x="-60.098213"
-         y="182.02673"
-         style="stroke-width:0.26458332" /></text>
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot1240"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,0,87)"><flowRegion
-         id="flowRegion1242"><rect
-           id="rect1244"
-           width="7.5471697"
-           height="69.811317"
-           x="1296.2264"
-           y="106.90836" /></flowRegion><flowPara
-         id="flowPara1246" /></flowRoot>    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="28.619215"
-       y="636.10486"
-       id="text1068"><tspan
-         sodipodi:role="line"
-         id="tspan1066"
-         x="28.619215"
-         y="643.59589"
-         style="stroke-width:0.26458332" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="218.07086"
-       y="319.85294"
-       id="text978"><tspan
-         sodipodi:role="line"
-         id="tspan976"
-         x="218.07086"
-         y="327.34396"
-         style="stroke-width:0.26458332" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-147.27818"
-       y="163.67017"
-       id="text972"><tspan
-         sodipodi:role="line"
-         id="tspan970"
-         x="-147.27818"
-         y="171.16118"
-         style="stroke-width:0.26458332" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="18.804829"
-       y="148.13086"
-       id="text979"><tspan
-         sodipodi:role="line"
-         id="tspan977"
-         x="18.804829"
-         y="148.13086"
-         style="font-weight:bold;fill:#ffffff;stroke-width:0.26458332">LOGIN</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="16.858408"
-       y="171.6089"
-       id="text983"><tspan
-         sodipodi:role="line"
-         id="tspan981"
-         x="16.858408"
-         y="171.6089"
-         style="fill:#ffffff;stroke-width:0.26458332"><tspan
-   style="font-size:5.64444447px"
-   id="tspan1169">Username </tspan>:</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
-       x="22.866606"
-       y="161.55219"
-       id="text987"><tspan
-         sodipodi:role="line"
-         id="tspan985"
-         x="22.866606"
-         y="167.17044"
-         style="stroke-width:0.26458332;fill:#ffffff;" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="16.505411"
-       y="185.72476"
-       id="text991"><tspan
-         sodipodi:role="line"
-         id="tspan989"
-         x="16.505411"
-         y="185.72476"
-         style="fill:#ffffff;stroke-width:0.26458332;font-size:5.64444444px">Password:</tspan></text>
-    <path
-       style="fill:#ffffff;fill-opacity:0.94117647;stroke:#ffffff;stroke-width:0.30254129px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 55.152067,186.60851 c 80.086533,0.41298 80.086533,0 80.086533,0"
-       id="path993-3"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#ffffff;fill-opacity:0.94117647;stroke:#ffffff;stroke-width:0.3020536px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 56.18965,172.04108 c 79.73357,0.41347 79.73357,0 79.73357,0"
-       id="path993-3-6"
-       inkscape:connector-curvature="0" />
-    <rect
-       style="opacity:1;fill:#663399;fill-opacity:0;stroke:#ffffff;stroke-width:0.25033244;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1025"
-       width="46.257336"
-       height="14.134567"
-       x="55.688034"
-       y="202.84555"
-       rx="2.4709835"
-       ry="2.4709835" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="71.753136"
-       y="211.50099"
-       id="text1029"><tspan
-         sodipodi:role="line"
-         id="tspan1027"
-         x="71.753136"
-         y="211.50099"
-         style="fill:#ffffff;stroke-width:0.26458332;font-size:4.93888889px;font-weight:bold">Login</tspan></text>
-    <rect
-       style="opacity:0.47;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.265;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1031"
-       width="289.81091"
-       height="9.177927"
-       x="4.3807831"
-       y="291.10226" />
+       x="4.3967323"
+       y="90.932358" />
     <g
-       id="g1036"
-       transform="translate(0.70599498,-0.88282323)">
+       style="display:inline"
+       id="g4225"
+       transform="translate(-0.64317799,0.66034698)">
+      <rect
+         y="90.272011"
+         x="5.0399103"
+         height="210.00818"
+         width="289.15179"
+         id="rect21"
+         style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.57524377;stroke-miterlimit:4;stroke-dasharray:0.05752438, 0.05752438;stroke-dashoffset:0;stroke-opacity:1" />
       <text
-         id="text1064"
-         y="297.80792"
-         x="14.04496"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+         id="text839"
+         y="103.4762"
+         x="14.363094"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:'Smile of the Ocean';-inkscape-font-specification:'Smile of the Ocean';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          xml:space="preserve"><tspan
-           style="font-size:4.58611107px;fill:#ff0000;fill-opacity:1;stroke-width:0.26458332;opacity:1"
-           y="297.80792"
+           style="fill:#000000;stroke-width:0.26458332"
+           y="110.87955"
+           x="14.363094"
+           id="tspan837"
+           sodipodi:role="line" /></text>
+      <text
+         id="text843"
+         y="89.869049"
+         x="22.678572"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:'Smile of the Ocean';-inkscape-font-specification:'Smile of the Ocean';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#000000;stroke-width:0.26458332"
+           y="97.2724"
+           x="22.678572"
+           id="tspan841"
+           sodipodi:role="line" /></text>
+      <text
+         transform="scale(0.90859745,1.1005974)"
+         id="text847"
+         y="97.854706"
+         x="10.853128"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.32915878px;line-height:1.25;font-family:'Smile of the Ocean';-inkscape-font-specification:'Smile of the Ocean';letter-spacing:0px;word-spacing:0px;fill:#f0f1f4;fill-opacity:1;stroke:none;stroke-width:0.54153621"
+         xml:space="preserve"><tspan
+           style="fill:#f0f1f4;fill-opacity:1;stroke-width:0.54153621"
+           y="97.854706"
+           x="10.853128"
+           id="tspan845"
+           sodipodi:role="line">Budget </tspan></text>
+      <text
+         id="text884"
+         y="139.57291"
+         x="55.940475"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#000000;stroke-width:0.26458332"
+           y="147.06392"
+           x="55.940475"
+           id="tspan882"
+           sodipodi:role="line" /></text>
+      <text
+         id="text995"
+         y="174.53572"
+         x="-60.098213"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#000000;stroke-width:0.26458332"
+           y="182.02673"
+           x="-60.098213"
+           id="tspan993"
+           sodipodi:role="line" /></text>
+      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,0,87)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot1240"
+         xml:space="preserve"><flowRegion
+           style="fill:#000000"
+           id="flowRegion1242"><rect
+             style="fill:#000000"
+             y="106.90836"
+             x="1296.2264"
+             height="69.811317"
+             width="7.5471697"
+             id="rect1244" /></flowRegion><flowPara
+           id="flowPara1246" /></flowRoot>      <text
+         id="text1068"
+         y="636.10486"
+         x="28.619215"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#000000;stroke-width:0.26458332"
+           y="643.59589"
+           x="28.619215"
+           id="tspan1066"
+           sodipodi:role="line" /></text>
+      <text
+         id="text978"
+         y="319.85294"
+         x="218.07086"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#000000;stroke-width:0.26458332"
+           y="327.34396"
+           x="218.07086"
+           id="tspan976"
+           sodipodi:role="line" /></text>
+      <text
+         id="text972"
+         y="163.67017"
+         x="-147.27818"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#000000;stroke-width:0.26458332"
+           y="171.16118"
+           x="-147.27818"
+           id="tspan970"
+           sodipodi:role="line" /></text>
+      <text
+         id="text987"
+         y="161.55219"
+         x="22.866606"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#000000;stroke-width:0.26458332"
+           y="167.17044"
+           x="22.866606"
+           id="tspan985"
+           sodipodi:role="line" /></text>
+      <rect
+         y="291.10226"
+         x="4.3807831"
+         height="9.177927"
+         width="289.81091"
+         id="rect1031"
+         style="opacity:0.47000002;fill:#f0f1f4;fill-opacity:1;stroke:none;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         style="fill:#000000"
+         transform="translate(0.70599498,-0.88282323)"
+         id="g1036">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46666622px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
            x="14.04496"
-           id="tspan1062"
-           sodipodi:role="line">error: budget title already exists</tspan></text>
+           y="297.80792"
+           id="text1064"><tspan
+             sodipodi:role="line"
+             id="tspan1062"
+             x="14.04496"
+             y="297.80792"
+             style="font-size:4.58611107px;opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">error: budget title already exists</tspan></text>
+        <circle
+           style="opacity:1;fill:#f0f1f4;fill-opacity:1;stroke:none;stroke-width:0.42441729;stroke-miterlimit:4;stroke-dasharray:0.04244173, 0.04244173;stroke-dashoffset:0;stroke-opacity:1"
+           id="path969-3"
+           cx="9.9673586"
+           cy="296.57339"
+           r="1.5" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path1171"
+           d="M 4.5107356,114.07434 C 293.61568,113.01535 293.26267,113.36835 293.26267,113.36835"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0" />
+      </g>
       <circle
          r="1.5"
-         cy="296.57339"
-         cx="9.9673586"
-         id="path969-3"
-         style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.42441729;stroke-miterlimit:4;stroke-dasharray:0.04244173, 0.04244173;stroke-dashoffset:0;stroke-opacity:1" />
-      <path
-         style="fill:#ffffff;stroke:#ffffff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0"
-         d="M 4.5107356,114.07434 C 293.61568,113.01535 293.26267,113.36835 293.26267,113.36835"
-         id="path1171"
-         inkscape:connector-curvature="0" />
-    </g>
-    <circle
-       style="opacity:1;fill:#d4ff2a;fill-opacity:1;stroke:none;stroke-width:0.42441729;stroke-miterlimit:4;stroke-dasharray:0.04244173, 0.04244173;stroke-dashoffset:0;stroke-opacity:1"
-       id="path969"
-       cx="281.0744"
-       cy="295.82068"
-       r="1.5" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="176.77351"
-       y="170.19759"
-       id="text1110"><tspan
-         sodipodi:role="line"
-         id="tspan1108"
-         x="176.77351"
-         y="170.19759"
-         style="font-weight:bold;font-size:4.93888889px;fill:#ffffff;stroke-width:0.26458332">Budgets And Expenses</tspan></text>
-    <g
-       id="g1131"
-       transform="translate(-2.8239799,14.99943)">
-      <circle
-         r="1.1767782"
-         cy="164.43446"
-         cx="171.95007"
-         id="path969-2"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.64644349;stroke-miterlimit:4;stroke-dasharray:0.06464436, 0.06464436;stroke-dashoffset:0;stroke-opacity:1" />
+         cy="295.82068"
+         cx="281.0744"
+         id="path969"
+         style="opacity:1;fill:#d4ff2a;fill-opacity:1;stroke:#000000;stroke-width:0.52399999;stroke-miterlimit:4;stroke-dasharray:0.0524, 0.0524;stroke-dashoffset:0;stroke-opacity:0" />
       <text
-         id="text1114"
-         y="166.14114"
-         x="176.77351"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ff9e9e;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-weight:normal;font-size:4.23333311px;fill:#ff9e9e;fill-opacity:1;stroke-width:0.26458332"
-           y="166.14114"
-           x="176.77351"
-           id="tspan1112"
-           sodipodi:role="line">Create new budget and add expenses</tspan></text>
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="187.71643"
-       y="183.79102"
-       id="text1122"><tspan
-         sodipodi:role="line"
-         id="tspan1120"
+         id="text1122"
+         y="183.79102"
          x="187.71643"
-         y="189.40927"
-         style="stroke-width:0.26458332" /></text>
-    <g
-       transform="translate(-3.121148,21.821223)"
-       id="g1131-9">
-      <circle
-         r="1.1767782"
-         cy="164.43446"
-         cx="171.95007"
-         id="path969-2-1"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.64644349;stroke-miterlimit:4;stroke-dasharray:0.06464436, 0.06464436;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         id="text1114-2"
-         y="166.14114"
-         x="176.77351"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ff9e9e;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          xml:space="preserve"><tspan
-           style="font-weight:normal;font-size:4.23333311px;fill:#ff9e9e;fill-opacity:1;stroke-width:0.26458332"
-           y="166.14114"
-           x="176.77351"
-           id="tspan1112-7"
-           sodipodi:role="line">Open, close, delete budget and expenses</tspan></text>
-    </g>
-    <g
-       transform="translate(-40.892539,40.156677)"
-       id="g1131-0">
-      <circle
-         r="1.1767782"
-         cy="153.13855"
-         cx="209.89697"
-         id="path969-2-9"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.64644349;stroke-miterlimit:4;stroke-dasharray:0.06464436, 0.06464436;stroke-dashoffset:0;stroke-opacity:1" />
-      <text
-         id="text1114-3"
-         y="154.84523"
-         x="212.07326"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ff9e9e;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-weight:normal;font-size:4.23333311px;fill:#ff9e9e;fill-opacity:1;stroke-width:0.26458332"
-           y="154.84523"
-           x="212.07326"
-           id="tspan1112-6"
-           sodipodi:role="line"> Click budget title or expense tile to edit</tspan></text>
+           style="fill:#000000;stroke-width:0.26458332"
+           y="189.40927"
+           x="187.71643"
+           id="tspan1120"
+           sodipodi:role="line" /></text>
+      <g
+         transform="translate(173.67476,-33.534762)"
+         id="g1305">
+        <rect
+           style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.84420401;stroke-miterlimit:4;stroke-dasharray:0.08442041, 0.08442041;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect1289"
+           width="128.96017"
+           height="84.512115"
+           x="-158.01566"
+           y="171.96362"
+           ry="1.2480346"
+           rx="1.2480346" />
+        <g
+           id="g1271"
+           transform="translate(-170.1448,33.887758)">
+          <text
+             id="text979"
+             y="155.53909"
+             x="18.804829"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#2c963b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-weight:bold;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+               y="155.53909"
+               x="18.804829"
+               id="tspan977"
+               sodipodi:role="line">LOGIN</tspan></text>
+          <text
+             id="text983"
+             y="171.6089"
+             x="16.858408"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+               y="171.6089"
+               x="16.858408"
+               id="tspan981"
+               sodipodi:role="line"><tspan
+   id="tspan1169"
+   style="font-size:5.64444447px;fill:#ffffff;fill-opacity:1">Username </tspan>:</tspan></text>
+          <text
+             id="text991"
+             y="185.72476"
+             x="16.505411"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-size:5.64444447px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+               y="185.72476"
+               x="16.505411"
+               id="tspan989"
+               sodipodi:role="line">Password:</tspan></text>
+          <path
+             inkscape:connector-curvature="0"
+             id="path993-3"
+             d="m 55.152067,186.60851 c 80.086533,0.41298 80.086533,0 80.086533,0"
+             style="fill:#ffffff;fill-opacity:0.94117647;stroke:#000000;stroke-width:0.30254129px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path993-3-6"
+             d="m 56.18965,172.04108 c 79.73357,0.41347 79.73357,0 79.73357,0"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3020536px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0" />
+          <rect
+             ry="2.4709835"
+             rx="2.4709835"
+             y="195.44588"
+             x="16.810484"
+             height="10.115383"
+             width="33.266998"
+             id="rect1025"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.44477123;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+          <text
+             id="text1029"
+             y="202.34065"
+             x="25.631596"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#31373d;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-weight:bold;font-size:4.93888903px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+               y="202.34065"
+               x="25.631596"
+               id="tspan1027"
+               sodipodi:role="line">Login</tspan></text>
+          <g
+             id="g4707"
+             style="stroke:#1a1a1a;stroke-opacity:1">
+            <rect
+               style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.44259587;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="rect1025-6"
+               width="33.768387"
+               height="9.8679514"
+               x="189.31404"
+               y="186.23166"
+               rx="2.4709835"
+               ry="2.4709835" />
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;display:inline;fill:#31373d;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.26458332;stroke-opacity:1"
+               x="197.29756"
+               y="192.59837"
+               id="text1029-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan1027-1"
+                 x="197.29756"
+                 y="192.59837"
+                 style="font-weight:bold;font-size:4.93888903px;fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.26458332;stroke-opacity:1">Signup</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g
+         transform="translate(184.40621,-96.477191)"
+         id="g4139">
+        <g
+           id="g3624"
+           transform="matrix(0.95782232,0,0,1.0940517,-2.5131209,-39.441986)">
+          <g
+             transform="translate(-208.96316,-7.0983339)"
+             id="g4156">
+            <g
+               id="g1287"
+               transform="translate(0.70599591,81.542418)">
+              <text
+                 id="text1110"
+                 y="180.60933"
+                 x="196.89436"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#37bc4a;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+                 xml:space="preserve"><tspan
+                   style="font-weight:bold;font-size:4.93888903px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+                   y="180.60933"
+                   x="196.89436"
+                   id="tspan1108"
+                   sodipodi:role="line">Budgets And Expenses</tspan></text>
+              <g
+                 transform="translate(17.296877,22.765375)"
+                 id="g1131">
+                <circle
+                   style="opacity:1;fill:#f0f1f4;fill-opacity:1;stroke:none;stroke-width:0.64644349;stroke-miterlimit:4;stroke-dasharray:0.06464436, 0.06464436;stroke-dashoffset:0;stroke-opacity:1"
+                   id="path969-2"
+                   cx="171.95007"
+                   cy="164.43446"
+                   r="1.1767782" />
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+                   x="176.77351"
+                   y="166.14114"
+                   id="text1114"><tspan
+                     sodipodi:role="line"
+                     id="tspan1112"
+                     x="176.77351"
+                     y="166.14114"
+                     style="font-weight:normal;font-size:4.23333311px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">Create new budget and add expenses</tspan></text>
+              </g>
+              <g
+                 style="fill:#31373d;fill-opacity:1"
+                 id="g1131-9"
+                 transform="translate(16.999709,29.587168)">
+                <circle
+                   style="opacity:1;fill:#f0f1f4;fill-opacity:1;stroke:#ffffff;stroke-width:0.64644349;stroke-miterlimit:4;stroke-dasharray:0.06464436, 0.06464436;stroke-dashoffset:0;stroke-opacity:1"
+                   id="path969-2-1"
+                   cx="171.95007"
+                   cy="164.43446"
+                   r="1.1767782" />
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#6b3781;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+                   x="176.77351"
+                   y="166.14114"
+                   id="text1114-2"><tspan
+                     sodipodi:role="line"
+                     id="tspan1112-7"
+                     x="176.77351"
+                     y="166.14114"
+                     style="font-weight:normal;font-size:4.23333311px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332">Open, close, delete budget and expenses</tspan></text>
+              </g>
+              <g
+                 id="g1131-0"
+                 transform="translate(-20.771682,47.922622)">
+                <circle
+                   style="opacity:1;fill:#f0f1f4;fill-opacity:1;stroke:#ffffff;stroke-width:0.64644349;stroke-miterlimit:4;stroke-dasharray:0.06464436, 0.06464436;stroke-dashoffset:0;stroke-opacity:1"
+                   id="path969-2-9"
+                   cx="209.89697"
+                   cy="153.13855"
+                   r="1.1767782" />
+                <text
+                   xml:space="preserve"
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;line-height:1.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#37bc4a;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+                   x="212.07326"
+                   y="154.84523"
+                   id="text1114-3"><tspan
+                     sodipodi:role="line"
+                     id="tspan1112-6"
+                     x="212.07326"
+                     y="154.84523"
+                     style="font-weight:normal;font-size:4.23333311px;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"> Click budget title or expense tile to edit</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
     </g>
   </g>
 </svg>

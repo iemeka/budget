@@ -232,6 +232,10 @@
     vertical-align: middle;
 }
 
+.default{
+    text-transform:none !important;
+}
+
 
 #table-header-wrapper tr th{
     /* border :1px solid black; */

@@ -255,7 +255,8 @@ getSinglebudget = function (budgetId){
 
 
 window.addEventListener("load", () => {
-    getUserName();
+    name = getUserName();
+    closeExpenses(name);
     getAllbudgets();
     addNewBudget();
     getTotalBudgetCost();
@@ -308,6 +309,7 @@ function getUserName(){
     let url = window.location.href
     name = url.split('?')[1]
     document.getElementById("user").textContent = name
+    return name
 }
     
 
