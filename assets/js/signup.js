@@ -1,6 +1,7 @@
 let button = document.getElementById("signup");
 
-button.addEventListener("click", () => {
+button.addEventListener("click", (event) => {
+    event.preventDefault();
     let username = document.getElementById("name").value;
     let password = document.getElementById("pass").value;
     let user = {
@@ -19,7 +20,7 @@ button.addEventListener("click", () => {
     .then(response => response.json())
     .then(function(result){
         if (result.data == null){
-            return document.getElementById('error-message').textContent = result.error
+            return errorMessage(result.error);
         }
         return window.location.replace(`http://localhost:8000/app.html?${username}`)
     });

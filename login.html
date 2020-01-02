@@ -1,19 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="author" content="emeka">
+        <meta name="description" content="budget app">
         <title>login</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
     </head>
     <body>
-        <p>
-            <a href="signup.html">signUp</a>
-        </p>
-        <form action="nextpage.html">
-            <p>name:<br /> <input type="text"  value="" id="name" name="username"></p>
-            <p>password:<br /> <input  value="" id="pass" type="password" name="password"></p>
-            <input type="button" id="login" value="logIn">
-        </form>
-
-        <p id="error-message"></p>
-        <script src="assets/js/login.js"></script>
+        <div class="wrap">
+            <header>
+                <h1>logo</h1>
+            </header>
+            <hr class="line">
+            <section>
+                <h2>login</h2>
+                <form action="" autocomplete="off">
+                    <ul>
+                        <li>
+                            <label for="name">username:</label>
+                            <input id="name" name="username" type="text" required>
+                        </li>
+                        <li>
+                            <label for="password">password:</label>
+                            <input id="pass" type="password" name="password" required>
+                        </li>
+                        <li><input type="submit" id="login" value="logIn"></li>
+                    </ul>
+                </form>
+                <aside>
+                    <h3>budget and expenses</h3>
+                    <ul>
+                        <li>&#187; Create new budget and add expenses</li>
+                        <li>&#187; Open, close, delete budget and expenses</li>
+                        <li>&#187; Click budget title or expense tile to edit</li>
+                    </ul>
+                    <a href="signup.html">signup</a> 
+                </aside>
+            </section>
+            <footer>
+                <div class="circle" id="noti-circle"></div>
+                <small id="error-message"></small> 
+                <div class="circle" id="user-circle"></div>
+            </footer>
+        </div>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/gen.js"></script>
     </body>
 </html>

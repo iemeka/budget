@@ -4,14 +4,68 @@
         <title>
             logIn or Signup
         </title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+        <style>
+            
+            .line + section > div{
+                border:2px solid yellow;
+                width: 500px;
+                height: 80px;
+                margin: auto;
+                border-radius: 30px;
+                margin-top:20vh;
+                overflow: hidden;
+            }
+
+            .line + section{
+                height: 390px;
+            }
+
+            a{
+                font-family: monospace;
+                font-size: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                display: inline-block;
+                width: 49.6%;
+                height: 100%;
+                line-height: 80px;
+
+            }
+            a[href^="signup"]{
+                float: left;
+                background-color: yellow;
+                color:black;
+            }
+
+            a[href^="login"]{
+                float: right;
+                background-color: black;
+                color:yellow;
+            }
+        </style>
     </head>
     <body>
-        <p>
-            <a href="signup.html">signUp</a>
-        </p>
-        <p>
-            <a href="login.html">login</a>
-        </p>
-        
+        <div class="wrap">
+            <header>
+                <h1>logo</h1>
+            </header>
+            <hr class="line">
+            <section>
+                <div>
+                    <a href="signup.html">sign up</a>
+                    <a href="login.html">login</a>
+                </div>
+            </section>
+            <footer>
+                <div class="circle" id="noti-circle"></div>
+                <small id="error-message"></small> 
+                <div class="circle" id="user-circle"></div>
+            </footer>
+        </div>
     </body>
 </html>

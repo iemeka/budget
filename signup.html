@@ -1,21 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="author" content="emeka">
+        <meta name="description" content="budget app">
         <title>signup</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/login.css">
     </head>
     <body>
-
-            <p>
-                <a href="login.html">login</a>
-            </p>
-        
-        <form method="POST" enctype="multipart/form-data">
-            <p>name:<br /> <input type="text" id="name" name="username"></p>
-            <p>password:<br /> <input type="password" id="pass" name="password"></p>
-            <input type="button" id="signup" value="sign up">
-        </form>
-        <p id="error-message"></p>
-
-        <script src="assets/js/signup.js"></script>
+        <div class="wrap">
+            <header>
+                <h1>logo</h1>
+            </header>
+            <hr class="line">
+            <section>
+                <h2>signup</h2>
+                <form action="" autocomplete="off">
+                    <ul>
+                        <li>
+                            <label for="name">username:</label>
+                            <input id="name" name="username" type="text" required>
+                        </li>
+                        <li>
+                            <label for="password">password:</label>
+                            <input type="password" id="pass" name="password" required>
+                        </li>
+                        <li><input type="submit"  id="signup" value="sign up"></li>
+                    </ul>
+                </form>
+                <aside>
+                    <h3>budget and expenses</h3>
+                    <ul>
+                        <li>&#187; Create new budget and add expenses</li>
+                        <li>&#187; Open, close, delete budget and expenses</li>
+                        <li>&#187; Click budget title or expense tile to edit</li>
+                    </ul>
+                    <a href="login.html">login</a> 
+                </aside>
+            </section>
+            <footer>
+                <div class="circle" id="noti-circle"></div>
+                <small id="error-message"></small> 
+                <div class="circle" id="user-circle"></div>
+            </footer>
+        </div>
+    <script src="assets/js/signup.js"></script>
+    <script src="assets/js/gen.js"></script>
     </body>
 </html>
