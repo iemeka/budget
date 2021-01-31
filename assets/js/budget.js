@@ -16,7 +16,7 @@ createArticles = function(dataParams,articleHolder,budgetId,budgetTitle,article,
                     event.stopPropagation()
                 })
                 editBox.focus()
-                fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
+                fetch(`https://bud-api.herokuapp.com/budget/${budgetId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     budgetTitle = result.data.budget_title;
@@ -37,7 +37,7 @@ createArticles = function(dataParams,articleHolder,budgetId,budgetTitle,article,
                                     'Accept': 'application/json'
                                 }
                             }
-                            fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
+                            fetch(`https://bud-api.herokuapp.com/budget/${budgetId}`, dataParams)
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
@@ -61,7 +61,7 @@ createArticles = function(dataParams,articleHolder,budgetId,budgetTitle,article,
             span.setAttribute("id",budgetId)
             h3.append(span)
             article.append(h3)
-            fetch(`http://127.0.0.1:5000/budgets/costs/${budgetId}`, dataParams)
+            fetch(`https://bud-api.herokuapp.com/budgets/costs/${budgetId}`, dataParams)
             .then(response => response.json())
             .then(function(result){
                 let oneData = result.data
@@ -89,7 +89,7 @@ createArticles = function(dataParams,articleHolder,budgetId,budgetTitle,article,
                         'Accept': 'application/json'
                     }
                 }
-                fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
+                fetch(`https://bud-api.herokuapp.com/budget/${budgetId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     let delRow = document.getElementById("article-"+budgetId);
@@ -141,7 +141,7 @@ getAllbudgets = function (){
             'Accept': 'application/json'
         }
     }
-    fetch('http://127.0.0.1:5000/budget', dataParams)
+    fetch('https://bud-api.herokuapp.com/budget', dataParams)
     .then(response => response.json())
     .then(function(result){
         let articleHolder = document.getElementById("article-holder")
@@ -202,7 +202,7 @@ addNewBudget = function(){
                         'Accept': 'application/json'
                     }
                 }
-                fetch('http://127.0.0.1:5000/budget', dataParams)
+                fetch('https://bud-api.herokuapp.com/budget', dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     if(result.data == null){
@@ -236,7 +236,7 @@ getSinglebudget = function (budgetId){
             'Accept': 'application/json'
         }
     }
-    fetch(`http://127.0.0.1:5000/budget/${budgetId}`, dataParams)
+    fetch(`https://bud-api.herokuapp.com/budget/${budgetId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
         let articleHolder = document.getElementById("article-holder")
@@ -270,7 +270,7 @@ function getTotalBudgetCost(){
             'Accept': 'application/json'
         }
     }
-    fetch('http://127.0.0.1:5000/budgets/costs', dataParams)
+    fetch('https://bud-api.herokuapp.com/budgets/costs', dataParams)
     .then(response => response.json())
     .then(function(result){
         let total = result.data.pop()
@@ -289,7 +289,7 @@ function getIndividualBudgetCost(budgetId){
             'Accept': 'application/json'
         }
     }
-    fetch(`http://127.0.0.1:5000/budgets/costs/${budgetId}`, dataParams)
+    fetch(`https://bud-api.herokuapp.com/budgets/costs/${budgetId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
         let oneData = result.data

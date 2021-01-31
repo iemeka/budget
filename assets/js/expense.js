@@ -15,7 +15,7 @@ createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,exp
                     event.stopPropagation()
                 })
                 editBox.focus()
-                fetch(`http://127.0.0.1:5000/expense/${expenseId}`, dataParams)
+                fetch(`https://bud-api.herokuapp.com/expense/${expenseId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     expenseTitle = result.data.expense_title
@@ -37,7 +37,7 @@ createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,exp
                                     'Accept': 'application/json'
                                 }
                             }
-                            fetch(`http://127.0.0.1:5000/expenses/title/${budgetId}/${expenseId}`, dataParams)
+                            fetch(`https://bud-api.herokuapp.com/expenses/title/${budgetId}/${expenseId}`, dataParams)
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
@@ -68,7 +68,7 @@ createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,exp
                     event.stopPropagation()
                 })
                 editCost.focus()
-                fetch(`http://127.0.0.1:5000/expense/${expenseId}`, dataParams)
+                fetch(`https://bud-api.herokuapp.com/expense/${expenseId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     expenseCost = result.data.expense_cost
@@ -89,7 +89,7 @@ createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,exp
                                     'Accept': 'application/json'
                                 }
                             }
-                            fetch(`http://127.0.0.1:5000/expenses/cost/${budgetId}/${expenseId}`, dataParams)
+                            fetch(`https://bud-api.herokuapp.com/expenses/cost/${budgetId}/${expenseId}`, dataParams)
                             .then(response => response.json())
                             .then(function(result){
                                 if (result.data == null){
@@ -122,7 +122,7 @@ createExpenseRows = function(budgetId,dataParams,table,expenseId,expenseCost,exp
                         'Accept': 'application/json'
                     }
                 }
-                fetch(`http://127.0.0.1:5000/expenses/${expenseId}`, dataParams)
+                fetch(`https://bud-api.herokuapp.com/expenses/${expenseId}`, dataParams)
                 .then(response => response.json())
                 .then(function(result){
                     let delRow = document.getElementById("row-"+expenseId);
@@ -144,7 +144,7 @@ getAllExpenses = function (budgetId){
             'Accept': 'application/json'
         }
     }
-    fetch(`http://127.0.0.1:5000/expenses/${budgetId}`, dataParams)
+    fetch(`https://bud-api.herokuapp.com/expenses/${budgetId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
         let table = document.getElementsByTagName("table")[1]
@@ -222,7 +222,7 @@ addNewExpenses = function(budgetId){
                     'Accept': 'application/json'
                 }
             }
-            fetch(`http://127.0.0.1:5000/expenses/${budgetId}`, dataParams)
+            fetch(`https://bud-api.herokuapp.com/expenses/${budgetId}`, dataParams)
             .then(response => response.json())
             .then(function(result){
                 if(result.data == null){
@@ -258,7 +258,7 @@ getSingleEXpense = function (budgetId, expenseId){
             'Accept': 'application/json'
         }
     }
-    fetch(`http://127.0.0.1:5000/expense/${expenseId}`, dataParams)
+    fetch(`https://bud-api.herokuapp.com/expense/${expenseId}`, dataParams)
     .then(response => response.json())
     .then(function(result){
         let table = document.getElementsByTagName("table")[1]
