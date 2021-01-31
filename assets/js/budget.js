@@ -146,7 +146,7 @@ getAllbudgets = function (){
     .then(function(result){
         let articleHolder = document.getElementById("article-holder")
         if (result.data == null){
-            consol.log(result)
+            console.log(result)
             return window.location.replace('https://iemeka.github.io/budget/index.html')
         }else{
             for(let item of result.data){
