@@ -149,7 +149,7 @@ getAllExpenses = function (budgetId){
     .then(function(result){
         let table = document.getElementsByTagName("table")[1]
         if (result.data == null){
-            return window.location.replace('http://localhost:8000/index.html')
+            return window.location.replace('https://iemeka.github.io/budget/index.html')
         }else{
             res = Object.keys(result.data)[0]
             for(let item of result.data[res]){
@@ -263,7 +263,7 @@ getSingleEXpense = function (budgetId, expenseId){
     .then(function(result){
         let table = document.getElementsByTagName("table")[1]
         if (result.data == null){
-            return window.location.replace('http://localhost:8000/index.html')
+            return window.location.replace('https://iemeka.github.io/budget/index.html')
         }else{
             let item = result.data
             let expenseId = item.expense_id;
@@ -281,7 +281,7 @@ getSingleEXpense = function (budgetId, expenseId){
 function closeExpenses(username){
     clsExp = document.getElementById('close-expense')
     clsExp.addEventListener('click', ()=>{
-        return window.location.replace(`http://localhost:8000/app.html?${username}`);
+        return window.location.replace(`https://iemeka.github.io/budget/app.html?${username}`);
     }) 
 }
     

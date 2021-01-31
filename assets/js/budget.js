@@ -146,7 +146,7 @@ getAllbudgets = function (){
     .then(function(result){
         let articleHolder = document.getElementById("article-holder")
         if (result.data == null){
-            return window.location.replace('http://localhost:8000/index.html')
+            return window.location.replace('https://iemeka.github.io/budget/index.html')
         }else{
             for(let item of result.data){
                 let budgetTitle = item.budget_title
@@ -241,7 +241,7 @@ getSinglebudget = function (budgetId){
     .then(function(result){
         let articleHolder = document.getElementById("article-holder")
         if (result.data == null){
-            return window.location.replace('http://localhost:8000/index.html');
+            return window.location.replace('https://iemeka.github.io/budget/index.html');
         }else{
             let item = result.data;
             let budgetId = item.budget_id;

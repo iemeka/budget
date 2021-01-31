@@ -22,6 +22,6 @@ button.addEventListener("click", (event) => {
         if (result.data == null){
             return errorMessage(result.error);
         }
-        return window.location.replace(`http://localhost:8000/app.html?${username}`)
+        return window.location.replace(`https://iemeka.github.io/budget/app.html?${username}`)
     });
 });
