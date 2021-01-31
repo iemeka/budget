@@ -274,7 +274,7 @@ function getTotalBudgetCost(){
     fetch('https://bud-api.herokuapp.com/budgets/costs', dataParams)
     .then(response => response.json())
     .then(function(result){
-        let total = result.data.pop()
+        let total = result.data
         document.getElementById('total-cost').textContent = total.total
 
     })
